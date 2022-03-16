@@ -62,7 +62,7 @@ def _is_not_protected(host):
 
 
 def _prepare_ddos_command(host):
-    return 'docker run --rm alpine/bombardier ' \
+    return 'docker run -d --rm alpine/bombardier ' \
         f'--connections {CONNECTIONS_PER_CONTAINER} ' \
         f'--duration {INTERVAL_BETWEEN_PING} ' \
         f'--timeout {REQUEST_TIMEOUT} ' \
